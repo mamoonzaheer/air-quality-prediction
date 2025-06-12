@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 56px;
+            background-image: url('static/background.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .navbar .nav-link, .navbar .navbar-brand {
+            color: #ffffff;
+        }
+        .navbar .nav-link:hover {
+            color: #cccccc;
+        }
+        .btn-primary {
+            background-color: #ff9800;
+            border-color: #ff9800;
+        }
+        .btn-primary:hover {
+            background-color: #e68900;
+            border-color: #e68900;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 0;
+        }
+        .logo {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .team {
+            list-style: none;
+            padding: 0;
+        }
+        .team li {
+            margin: 5px 0;
+        }
+        .phases {
+            list-style: none;
+            padding: 0;
+        }
+        .phases li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+            <img src="static/logo.png" alt="Logo" width="160" height="50" class="d-inline-block align-top logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/about">About Us <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container text-center my-5">
+        <h1 class="display-4">About Us</h1>
+        <p class="lead">We are dedicated to providing accurate air pollution predictions to help improve urban air quality and public health.</p>
+        <h3>Organization: ITSOLERA PVT LTD</h3>
+        <h4>Project Title: Air Pollution Prediction System for Smart City</h4>
+        <h5>ML Team Epsilon Project: 04</h5>
+        <ul class="team">
+            <li><strong>Team Lead:</strong> Ghafira Farameen</li>
+            <li>Rimsha Bibi</li>
+	    <li>Muhammad Rizwan</li>
+            <li>Atta Ur Rehman</li>
+            <li>Muhammad Sannan</li>
+            <li>Mamoon Zaheer</li>
+            <li>Maryam Wahab</li>
+        </ul>
+        <h5>Project Phases and Responsibilities:</h5>
+        <ul class="phases">
+            <li><strong>Phase 1: Requirement Analysis and Feasibility Study</strong>
+                <ul>
+                    <li>Conduct a detailed requirement analysis to understand the specific needs and constraints of the system.</li>
+                    <li>Perform a feasibility study to evaluate the technical and operational viability of the project.</li>
+                    <li><strong>Responsible: Muhammad Sannan</strong></li>
+                </ul>
+            </li>
+            <li><strong>Phase 2: System Design</strong>
+                <ul>
+                    <li>Design the system architecture, including hardware and software components.</li>
+                    <li>Define the data pipeline for collecting, preprocessing, and analyzing air pollution data.</li>
+                    <li><strong>Responsible: Atta Ur Rehman</strong></li>
+                </ul>
+            </li>
+            <li><strong>Phase 3: Data Collection and Preprocessing</strong>
+                <ul>
+                    <li>Collect historical and real-time air pollution data from various sources such as sensors, weather stations, and public databases.</li>
+                    <li>Preprocess the data to remove noise, handle missing values, and normalize the data.</li>
+                    <li><strong>Responsible: Muhammad Rizwan</strong></li>
+                </ul>
+            </li>
+            <li><strong>Phase 4: Model Development</strong>
+                <ul>
+                    <li>Implement a multivariate multistep time series model using the random forest algorithm.</li>
+                    <li>Train the model on the collected data to predict future air pollution levels.</li>
+                    <li><strong>Responsible: Muhammad Rizwan</strong></li>
+                </ul>
+            </li>
+            <li><strong>Phase 5: System Integration</strong>
+                <ul>
+                    <li>Integrate the trained model into the overall system architecture.</li>
+                    <li>Develop a user-friendly interface for environmental protection departments to interact with the system and view predictions.</li>
+                    <li><strong>Responsible: Atta Ur Rehman + Rimsha</strong></li>
+                </ul>
+            </li>
+            <li><strong>Phase 6: Testing and Evaluation</strong>
+                <ul>
+                    <li>Conduct extensive testing to evaluate the accuracy and robustness of the air pollution prediction model.</li>
+                    <li>Perform validation using real-world data to ensure effectiveness in practical scenarios.</li>
+                    <li><strong>Responsible: Muhammad Rizwan</strong></li>
+                </ul>
+            </li>
+            <li><strong>Phase 7: Deployment and Maintenance</strong>
+                <ul>
+                    <li>Deploy the system in the target environment.</li>
+                    <li>Establish a maintenance plan to ensure long-term reliability and performance.</li>
+                    <li><strong>Responsible: Mamoon Zaheer & Maryam Wahab</strong></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <footer class="footer text-center">
+        <p>&copy; 2024 Air Pollution Prediction System. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

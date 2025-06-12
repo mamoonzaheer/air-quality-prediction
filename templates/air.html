@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('static/imagea.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            animation: fadeInBackground 2s ease-in-out;
+        }
+
+        @keyframes fadeInBackground {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .form-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            animation: slideIn 1.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .form-label {
+            color: #ccc;
+        }
+
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            transform: scale(1.02);
+        }
+
+        .btn-primary {
+            margin-top: 10px;
+            background-color: #ff8c00;
+            border: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h3 class="text-center mb-4">Air Quality Form</h3>
+            <form action="/" method="post">
+                <div class="row form-row">
+                    <div class="col-md-6">
+                        <label for="co" class="form-label">CO</label>
+                        <input type="number" step="0.01" id="co" name="co" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="no" class="form-label">NO</label>
+                        <input type="number" step="0.01" id="no" name="no" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="col-md-6">
+                        <label for="no2" class="form-label">NO2</label>
+                        <input type="number" step="0.01" id="no2" name="no2" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="o3" class="form-label">O3</label>
+                        <input type="number" step="0.01" id="o3" name="o3" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="col-md-6">
+                        <label for="so2" class="form-label">SO2</label>
+                        <input type="number" step="0.01" id="so2" name="so2" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="pm2_5" class="form-label">PM2.5</label>
+                        <input type="number" step="0.01" id="pm2_5" name="pm2_5" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="col-md-6">
+                        <label for="pm10" class="form-label">PM10</label>
+                        <input type="number" step="0.01" id="pm10" name="pm10" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="nh3" class="form-label">NH3</label>
+                        <input type="number" step="0.01" id="nh3" name="nh3" class="form-control" required>
+                    </div>
+
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary w-100 btn_custom">Predict</button>
+                     <a href="/home" type="submit" class="btn btn-primary w-100">Back to Home</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

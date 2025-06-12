@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f8f9fa;
+            background-image: url('static/imageb.jpg'); /* Add your background image URL */
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the background image */
+            background-attachment: fixed; /* Keep the background image fixed while scrolling */
+        }
+        .container {
+            max-width: 1200px;
+            background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent background for the container */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .table-container {
+            margin-top: 20px;
+            overflow-x: auto; /* Enable horizontal scrolling */
+        }
+        .table {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%; /* Make sure the table spans the full width */
+            border-collapse: separate; /* For better control over column widths */
+        }
+        .thead-light th {
+            background-color: #007bff; /* Blue background for the table header */
+            color: #fff;
+            font-weight: bold;
+        }
+        .table tbody tr:nth-child(even) {
+            background-color: #f2f2f2; /* Light background for even rows */
+        }
+        .table tbody tr:hover {
+            background-color: #e9ecef; /* Highlighted background color on row hover */
+            transition: background-color 0.3s ease;
+        }
+        .btn-back, .btn-home {
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-back {
+            background-color: #ff8c00; /* Blue background for the button */
+            border: none;
+        }
+        .btn-back:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+        .btn-home {
+            background-color: #ff8c00; /* Green background for the button */
+            border: none;
+        }
+        .btn-home:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+        .table th, .table td {
+            vertical-align: middle;
+            position: relative;
+        }
+        .table th:first-child, .table td:first-child {
+            position: -webkit-sticky;
+            position: sticky;
+            left: 0;
+            background-color: #ffffff; /* White background for the fixed column */
+            z-index: 1; /* Make sure it stays above other cells */
+            border-right: 2px solid #dee2e6; /* Light border to separate from other columns */
+        }
+        .heading{
+        color:#000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading my-4 text-center">Air Quality Index</h1>
+
+        <div class="table-container">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Pollutant</th>
+                        {% for step in predictions['co'].keys() %}
+                            <th>{{ step }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pollutant, steps in predictions.items() %}
+                        <tr>
+                            <td>{{ pollutant }}</td>
+                            {% for step in steps %}
+                                <td>{{ steps[step][0] }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <a href="/" class="btn btn-primary btn-back">Go Back to Form</a>
+        <a href="/home" class="btn btn-success btn-home">Home</a>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
