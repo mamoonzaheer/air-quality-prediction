@@ -43,6 +43,13 @@ pip install -r requirements.txt
    - `rf.joblib` (trained random forest model)
    - `FINAL.csv` (historical air quality data)
 
+Note: The trained model file `rf.joblib` is not included in this repository because of size limits on GitHub.
+
+If you’d like to test the app, you can:
+- Train a new model using `Airpollution.ipynb`
+- Or request the model file via email: mamoonzaheer999@gmail.com
+
+
 ## Project Structure
 
 ```
